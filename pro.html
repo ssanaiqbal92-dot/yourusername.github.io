@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Construction & Property Website</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      background: #f4b400;
+      color: #222;
+    }
+
+    /* Dropdown */
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background: #333;
+      top: 50px;
+      min-width: 180px;
+      border-radius: 5px;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    nav ul ul li a {
+      padding: 12px;
+      font-size: 14px;
+    }
+    nav ul ul li a:hover {
+      background: #f4b400;
+      color: #222;
+    }
+    nav ul ul ul {
+      left: 180px;
+      top: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1581091215367-59ab6b12a6e8") center/cover no-repeat;
+      color: black;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+.hero h1,
+.hero p {
+  color: black;   /* ← only color changed */
+}
+.hero h1, 
+.hero p {
+  color: black;  /* only heading & paragraph inside hero turn black */
+}
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #f4b400;
+      color: #222;
+      font-weight: bold;
+      padding: 8px 15px;
+      margin-top: 15px;
+      border-radius: 20px;
+    }
+
+    /* Section */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    /* Form */
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #f4b400;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #222;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li>
+      <a href="#services">Services ▾</a>
+      <ul>
+        <li><a href="#construction">Construction</a></li>
+        <li><a href="#property">Property Management</a></li>
+        <li>
+          <a href="#">More ▸</a>
+          <ul>
+            <li><a href="#renovation">Renovation</a></li>
+            <li><a href="#interior">Interior Design</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero" id="home">
+  <h1>Building Dreams, Creating Future</h1>
+  <p>Your trusted partner in construction and property services</p>
+  <div class="badge">15+ Years of Experience</div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a leading construction and property management company with over <strong>15 years of experience</strong>. 
+     Our mission is to deliver high-quality projects and reliable property services that improve lives and communities.</p>
+  <ul>
+    <li>✔ Experienced team of architects and builders</li>
+    <li>✔ Affordable and transparent pricing</li>
+    <li>✔ 24/7 customer support</li>
+    <li>✔ 100+ successful projects delivered</li>
+  </ul>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card" id="construction">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Construction">
+      <h3>Construction</h3>
+      <p>We build residential, commercial, and industrial projects with safety and quality.</p>
+    </div>
+    <div class="card" id="property">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Property">
+      <h3>Property Management</h3>
+      <p>From buying and selling to renting and leasing, we manage properties with transparency.</p>
+    </div>
+    <div class="card" id="renovation">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Renovation">
+      <h3>Renovation</h3>
+      <p>We transform old spaces into modern and stylish living areas.</p>
+    </div>
+    <div class="card" id="interior">
+      <img src="C:\Users\unix\Downloads\Luxurious-MD-office-interior-1024x614.jpg" alt="Interior">
+      <h3>Interior Design</h3>
+      <p>Creative and functional designs that combine beauty with practicality.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Our Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353" alt="Apartments">
+      <h3>Modern Apartments</h3>
+      <p>Luxury apartments designed with modern architecture and eco-friendly materials.</p>
+    </div>
+    <div class="card">
+      <img src="C:\Users\unix\Downloads\dd.jpg" alt="Office">
+      <h3>Office Complex</h3>
+      <p>Spacious office complex built with innovative designs and top safety standards.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Villas">
+      <h3>Residential Villas</h3>
+      <p>Beautiful villas combining comfort, elegance, and affordability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Properties -->
+<section id="properties">
+  <h2>Available Properties</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Villa">
+      <h3>Luxury Villa</h3>
+      <p>Price: 250,000 <br> Location: City Center</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Apartment">
+      <h3>Modern Apartment</h3>
+      <p>Price: 120,000 <br> Location: Alitown</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Plot">
+      <h3>Commercial Plot</h3>
+      <p>Price: 500,000 <br> Location: Johr Town</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p><strong>Address:</strong> Johr Town,UMT</p>
+  <p><strong>Phone:</strong> 031234678</p>
+  <p><strong>Email:</strong> AIM@construction.com</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 AIM Construction & Property  | Trusted for 15 Years</p>
+</footer>
+
+</body>
+</html>
